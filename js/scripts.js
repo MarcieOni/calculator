@@ -4,7 +4,7 @@ function add(number1, number2) {
 }
 
 //USER INTERFACE LOGIC
-const number1 = prompt("enter a number");
-const number2 = prompt ("enter another number");
+const number1 = parseInt(prompt("enter a number"));
+const number2 = parseInt(prompt ("enter another number"));
 
 window.alert(add(number1, number2));
