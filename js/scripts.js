@@ -1,11 +1,10 @@
-function saySomething(whatToSay) {
-    window.alert(whatToSay);
-}
-
+//BUSINESS LOGIC
 function add(number1, number2) {
     return number1 + number2;
 }
 
-saySomething("hi");
+//USER INTERFACE LOGIC
+const number1 = prompt("enter a number");
+const number2 = prompt ("enter another number");
 
-saySomething("The sum is " + add(3,5) + ".")
+window.alert(add(number1, number2));
