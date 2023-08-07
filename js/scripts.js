@@ -16,7 +16,14 @@ function divide(number1, number2){
 }
 
 //USER INTERFACE LOGIC
-const number1 = parseInt(prompt("enter a number"));
-const number2 = parseInt(prompt ("enter another number"));
-
-window.alert("the sum of ur numbers is " + add(number1, number2) + ". ALSO.. " + number1 + " - " + number2 + " = " + subtract(number1, number2) + " | " + number1 + " x " + number2 + " = " + multiply(number1, number2) + " | " + number1 + " ÷ " + number2 + " = " + divide(number1, number2));
+function handleCalculation(event) {
+    event.preventDefault();
+    const number1 = parseInt(document.querySelector("input#input1").value);
+    const number2 = parseInt(document.querySelector("input#input2").value);
+    const operator = document.querySelector("input[name='operator']:checked").value;
+}
+  
+  window.addEventListener("load", function() {
+    const form = document.getElementById("calculator");
+    form.addEventListener("submit", handleCalculation);
+  });
